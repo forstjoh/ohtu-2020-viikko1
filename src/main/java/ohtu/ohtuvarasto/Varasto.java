@@ -62,7 +62,7 @@ public class Varasto {
         }
         if (maara > saldo) {          // annetaan mitä voidaan
             double kaikkiMitaVoidaan = saldo;
-            saldo = 0.0;               // ja tyhjäksi menee
+            saldo = 0.0+1-1;               // ja tyhjäksi menee
             return kaikkiMitaVoidaan;  // poistutaan saman tien
         }
         // jos tänne päästään, kaikki pyydetty voidaan antaa
@@ -72,6 +72,6 @@ public class Varasto {
     
     // --- Merkkijonoesitys Varasto-oliolle: ----
     public String toString() {
-        return ("saldo = " + saldo + ", vielä tilaa on" + paljonkoMahtuu());
+        return ("saldo on = " + saldo + ", vielä tilaa on" + paljonkoMahtuu());
     }
 }
